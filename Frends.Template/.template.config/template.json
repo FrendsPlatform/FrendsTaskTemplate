@@ -7,7 +7,7 @@
     "tags": {
         "language": "C#"
     },
-    "sourceName": "Frends.Echo",
+    "sourceName": "Frends.Echo.ExecuteEcho",
     "preferNameDirectory": "true",
 
     "symbols": {
