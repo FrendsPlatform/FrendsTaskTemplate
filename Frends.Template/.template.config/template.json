@@ -24,7 +24,7 @@
         "workflows": {
             "type": "parameter",
             "datatype": "string",
-            "defaultValue": "Frends.Echo",
+            "defaultValue": "Execute",
             "FileRename": "Execute"
         },
         "authors": {
