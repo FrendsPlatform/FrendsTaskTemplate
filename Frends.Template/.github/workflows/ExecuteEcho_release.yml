@@ -1,0 +1,12 @@
+name: ExecuteEcho Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: FrendsPlatform/FrendsTasks/.github/workflows/release.yml@main
+    with:
+      workdir: Frends.FTP.ExecuteEcho
+    secrets:
+      feed_api_key: ${{ secrets.TASKS_FEED_API_KEY }}

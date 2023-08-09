@@ -1,0 +1,17 @@
+name: ExecuteEcho Main
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Frends.FTP.ExecuteEcho/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: FrendsPlatform/FrendsTasks/.github/workflows/linux_build_main.yml@main
+    with:
+      workdir: Frends.FTP.ExecuteEcho
+    secrets:
+      badge_service_api_key: ${{ secrets.BADGE_SERVICE_API_KEY }}
