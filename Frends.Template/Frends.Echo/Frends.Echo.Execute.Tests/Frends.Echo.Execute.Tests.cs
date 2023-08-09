@@ -1,8 +1,8 @@
-using Frends.Echo.ExecuteEcho.Definitions;
+using Frends.Echo.Execute.Definitions;
 using NUnit.Framework;
 using System;
 
-namespace Frends.Echo.ExecuteEcho.Tests;
+namespace Frends.Echo.Execute.Tests;
 
 [TestFixture]
 class TestClass

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Frends.Echo.ExecuteEcho.Definitions;
+namespace Frends.Echo.Execute.Definitions;
 
 
 /// <summary>

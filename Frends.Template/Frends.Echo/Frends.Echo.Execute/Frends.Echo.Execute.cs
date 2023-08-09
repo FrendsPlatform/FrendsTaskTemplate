@@ -1,8 +1,8 @@
-﻿using Frends.Echo.ExecuteEcho.Definitions;
+﻿using Frends.Echo.Execute.Definitions;
 using System.ComponentModel;
 using System.Threading;
 
-namespace Frends.Echo.ExecuteEcho
+namespace Frends.Echo.Execute
 {
     /// <summary>
     /// Main class of the Task.
@@ -11,12 +11,12 @@ namespace Frends.Echo.ExecuteEcho
     {
         /// <summary>
         /// This is Task.
-        /// [Documentation](https://tasks.frends.com/tasks/frends-tasks/Frends.Echo.ExecuteEcho)
+        /// [Documentation](https://tasks.frends.com/tasks/frends-tasks/Frends.Echo.Execute)
         /// <param name="input">What to repeat.</param>
         /// <param name="options">Define if repeated multiple times. </param>
         /// <param name="cancellationToken"></param>
         /// <returns>Object { string Output } </returns>
-        public static Result ExecuteEcho([PropertyTab] Input input, [PropertyTab] Options options, CancellationToken cancellationToken)
+        public static Result Execute([PropertyTab] Input input, [PropertyTab] Options options, CancellationToken cancellationToken)
         {
             var repeats = new string[options.Amount];
 

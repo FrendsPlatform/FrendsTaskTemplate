@@ -1,4 +1,4 @@
-﻿namespace Frends.Echo.ExecuteEcho.Definitions;
+﻿namespace Frends.Echo.Execute.Definitions;
 
 /// <summary>
 /// Parameters class usually contains parameters that are required.

@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Frends.Echo.ExecuteEcho\Frends.Echo.ExecuteEcho.csproj" />
+    <ProjectReference Include="..\Frends.Echo.Execute\Frends.Echo.Execute.csproj" />
   </ItemGroup>
 
 </Project>
