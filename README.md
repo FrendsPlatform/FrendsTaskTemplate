@@ -37,10 +37,9 @@ You can create a new Task by the following command.
 
 Move workflows from the Task's folder to the .github directory inside the main directory.
 
-Frends.Task
-&#8970; .github
-        &#8970; workflows
-                &#8970; here
+e.g.
+
+--> Frends.Echo/.github/workflows/
 
 ## Get help using the template
 
