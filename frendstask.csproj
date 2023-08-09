@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>0.0.7</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <PackageId>frendstasktemplate</PackageId>
     <Title>Template for creating Frends Tasks.</Title>
     <Authors>Frends</Authors>
     <Description>Template for creating Frends Tasks.</Description>
-	<PackageProjectUrl>https://github.com/FrendsPlatform/FrendsTasks</PackageProjectUrl>
+	<PackageProjectUrl>https://github.com/FrendsPlatform/FrendsTasksTemplate</PackageProjectUrl>
     <PackageTags>dotnet-new;templates;frends</PackageTags>
     <TargetFramework>net6.0</TargetFramework>
     <IncludeContentInPack>true</IncludeContentInPack>

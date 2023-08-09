@@ -1,8 +1,8 @@
-# Frends Task template
+# Frends Task Template
 
-![](https://github.com/FrendsPlatform/Frends.Template.Task/workflows/AutoBuildMAster/badge.svg) ![NuGet](https://img.shields.io/nuget/v/frendstask) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![](https://github.com/FrendsPlatform/FrendsTasksTemplate/workflows/AutoBuildMAster/badge.svg) ![NuGet](https://img.shields.io/nuget/v/frendstask) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This template can be used to create new Official Tasks for [frends](frends.com) integration platform. This enables you to start writing code without any hassle with project formats etc.
+This template can be used to create new Official Tasks for [Frends](frends.com) integration platform. This enables you to start writing code without any hassle with project formats etc.
 
 The created C# solution will use the new tool chain (dotnet new etc.) from .NET Core SDK to ensure cross-platform compatibility. 
 
@@ -16,23 +16,31 @@ Frends tasks are mainly coded in C#, so you will also need a developing environm
 
 Unfortunately, Visual Studio or other IDEs do not currently support dotnet new templates, so you need to use the command line to install the template and create new Tasks based on it.
 
+## Clone repository
+
+First you need to clone the repository for the new Task. After cloning move to that folder.
 
 ## Install the template
 
-You can install the template by following the command
+You can install the template by following the command.
 
 #### Switch here the main feed.
 `dotnet new -i frendstasktemplate --nuget-source https://pkgs.dev.azure.com/frends-platform/frends-tasks/_packaging/test/nuget/v3/index.json` 
 
 ## Create a new custom task
 
-You can create a new Task by the following command
+You can create a new Task by the following command.
 
-`dotnet new frendstasktemplate --name namespaceForTask --className classNameForTask --taskName TaskName --license UNLICENSED --authors $env:UserName`
+`dotnet new frendstasktemplate --name namespaceForTask --className classNameForTask --taskName TaskName --workflows TaskName`
 
-The license can be anything listed in https://spdx.org/licenses/ or UNLICENSED.
+## Move workflows 
 
-**Always remember to add prefix Frends.Community to namespace when creating a community task and to set EnableCommunityTask to true. Always use MIT license for community Tasks. It is the default on, so you can omit the license parameter.**
+Move workflows from the Task's folder to the .github directory inside the main directory.
+
+Frends.Task
+&#8970; .github
+        &#8970; workflows
+                &#8970; here
 
 ## Get help using the template
 
