@@ -3,6 +3,6 @@
 ----------------------------------------------------------
 
 To see how to use this template please visit
-https://github.com/CommunityHiQ/Frends.Community.Echo
+https://github.com/FrendsPlatform/FrendsTaskTemplate
 
 To learn more about frends please visit frends.com
