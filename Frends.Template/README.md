@@ -1,18 +1,30 @@
-# Frends.Echo
+# Frends.Echo.Execute
+Description what the Task will do.
 
-Description for Tasks' operations.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Build](https://github.com/FrendsPlatform/Frends.Echo/actions/workflows/Execute_build_and_test_on_main.yml/badge.svg)](https://github.com/FrendsPlatform/Frends.Echo/actions)
+![Coverage](https://app-github-custom-badges.azurewebsites.net/Badge?key=FrendsPlatform/Frends.Echo/Frends.Echo.Execute|main)
 
-# Tasks
+## Installing
 
-- [Frends.Echo.Execute](Frends.Echo.Execute/README.md)
+You can install the Task via frends UI Task View.
 
-# Contributing
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+## Building
 
-1. Fork the repository on GitHub
-2. Clone the project to your own machine
-3. Commit changes to your own branch
-4. Push your work back up to your fork
-5. Submit a Pull request so that we can review your changes
+### Clone a copy of the repository
 
-NOTE: Be sure to merge the latest from "upstream" before making a pull request!
+`git clone https://github.com/FrendsPlatform/Frends.Echo.git`
+
+### Build the project
+
+`dotnet build`
+
+### Run tests
+
+Run the tests
+
+`dotnet test`
+
+### Create a NuGet package
+
+`dotnet pack --configuration Release`

@@ -24,7 +24,7 @@ class TestClass
             Delimiter = ", "
         };
 
-        var ret = Echo.ExecuteEcho(input, options, default);
+        var ret = Echo.Execute(input, options, default);
 
         Assert.That(ret.Output, Is.EqualTo("foobar, foobar, foobar"));
     }

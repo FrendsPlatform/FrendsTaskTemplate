@@ -11,11 +11,6 @@
     "preferNameDirectory": "true",
 
     "symbols": {
-        "fileName": {
-            "type": "parameter",
-            "defaultValue": "Frends.Echo",
-            "replaces": "Frends.Echo"
-        },
         "taskName": {
             "type": "parameter",
             "defaultValue": "Execute",
@@ -25,6 +20,12 @@
             "type": "parameter",
             "defaultValue": "Echo",
             "replaces": "Echo"
+        },
+        "workflows": {
+            "type": "parameter",
+            "datatype": "string",
+            "defaultValue": "Frends.Echo",
+            "FileRename": "Execute"
         },
         "authors": {
             "type": "parameter",
