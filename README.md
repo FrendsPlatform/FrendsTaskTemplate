@@ -24,8 +24,7 @@ First you need to clone the repository for the new Task. After cloning move to t
 
 You can install the template by following the command.
 
-#### Switch here the main feed.
-`dotnet new -i frendstasktemplate --nuget-source https://pkgs.dev.azure.com/frends-platform/frends-tasks/_packaging/test/nuget/v3/index.json` 
+`dotnet new -i frendstasktemplate --nuget-source https://pkgs.dev.azure.com/frends-platform/frends-tasks/_packaging/main/nuget/v3/index.json` 
 
 ## Create a new custom task
 
