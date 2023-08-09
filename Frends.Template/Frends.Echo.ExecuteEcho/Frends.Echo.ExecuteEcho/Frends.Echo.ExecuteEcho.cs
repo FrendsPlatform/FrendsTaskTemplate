@@ -1,22 +1,22 @@
-﻿using Frends.Template.Task.Definitions;
+﻿using Frends.Echo.ExecuteEcho.Definitions;
 using System.ComponentModel;
 using System.Threading;
 
-namespace Frends.Template.Task
+namespace Frends.Echo.ExecuteEcho
 {
     /// <summary>
     /// Main class of the Task.
     /// </summary>
-    public static class Template
+    public static class Echo
     {
         /// <summary>
         /// This is Task.
-        /// [Documentation](https://tasks.frends.com/tasks/frends-tasks/Frends.Template.Task)
+        /// [Documentation](https://tasks.frends.com/tasks/frends-tasks/Frends.Echo.ExecuteEcho)
         /// <param name="input">What to repeat.</param>
         /// <param name="options">Define if repeated multiple times. </param>
         /// <param name="cancellationToken"></param>
         /// <returns>Object { string Output } </returns>
-        public static Result Task([PropertyTab] Input input, [PropertyTab] Options options, CancellationToken cancellationToken)
+        public static Result ExecuteEcho([PropertyTab] Input input, [PropertyTab] Options options, CancellationToken cancellationToken)
         {
             var repeats = new string[options.Amount];
 

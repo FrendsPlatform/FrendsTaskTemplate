@@ -1,8 +1,8 @@
-using Frends.Template.Task.Definitions;
+using Frends.Echo.ExecuteEcho.Definitions;
 using NUnit.Framework;
 using System;
 
-namespace Frends.Template.Task.Tests;
+namespace Frends.Echo.ExecuteEcho.Tests;
 
 [TestFixture]
 class TestClass
@@ -24,7 +24,7 @@ class TestClass
             Delimiter = ", "
         };
 
-        var ret = Template.Task(input, options, default);
+        var ret = Echo.ExecuteEcho(input, options, default);
 
         Assert.That(ret.Output, Is.EqualTo("foobar, foobar, foobar"));
     }

@@ -7,19 +7,19 @@
     "tags": {
         "language": "C#"
     },
-    "sourceName": "Frends.Template.Task",
+    "sourceName": "Frends.Echo.ExecuteEcho",
     "preferNameDirectory": "true",
 
     "symbols": {
         "taskName": {
             "type": "parameter",
-            "defaultValue": "Task",
-            "replaces": "Task"
+            "defaultValue": "ExecuteEcho",
+            "replaces": "ExecuteEcho"
         },
         "className": {
             "type": "parameter",
-            "defaultValue": "Template",
-            "replaces": "Template"
+            "defaultValue": "Echo",
+            "replaces": "Echo"
         },
         "authors": {
             "type": "parameter",

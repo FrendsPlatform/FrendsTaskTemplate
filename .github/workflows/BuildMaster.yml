@@ -24,7 +24,7 @@ jobs:
         dotnet-version: '6.0.x'
         source-url: ${{ env.azure_artifacts_feed_url }}
       env:
-        NUGET_AUTH_TOKEN: ${{ secrets.feed_api_key }} 
+        NUGET_AUTH_TOKEN: ${{ secrets.TASKS_FEED_API_KEY }} 
     - name: Push NuGet package(s) to the prod feed
-      run: dotnet nuget push bin/Release/frendstasktemplate.*.nupkg --api-key ${{ secrets.feed_api_key }} --source ${{ env.azure_artifacts_feed_url }}
+      run: dotnet nuget push bin/Release/frendstasktemplate.*.nupkg --api-key ${{ secrets.TASKS_FEED_API_KEY }} --source ${{ env.azure_artifacts_feed_url }}
 

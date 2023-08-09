@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Frends.Template.Task\Frends.Template.Task.csproj" />
+    <ProjectReference Include="..\Frends.Echo.ExecuteEcho\Frends.Echo.ExecuteEcho.csproj" />
   </ItemGroup>
 
 </Project>

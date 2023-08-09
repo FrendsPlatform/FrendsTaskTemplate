@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Frends.Template.Task.Definitions;
+namespace Frends.Echo.ExecuteEcho.Definitions;
 
 
 /// <summary>
