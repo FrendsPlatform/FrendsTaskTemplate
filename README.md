@@ -32,13 +32,15 @@ You can create a new Task by the following command.
 
 `dotnet new frendstasktemplate --name namespaceForTask --className classNameForTask --taskName TaskName --workflows TaskName`
 
-## Move workflows 
+## Move workflows and .gitignore 
 
 Move workflows from the Task's folder to the .github directory inside the main directory.
 
 e.g.
 
 --> Frends.Echo/.github/workflows/
+
+Move .gitignore file to the main folder or remove it if it already exists.
 
 ## Get help using the template
 
