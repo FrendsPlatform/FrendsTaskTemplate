@@ -1,5 +1,5 @@
 ----------------------------------------------------------
----Task template for frends hybrid integration platform --
+---Task template for Frends hybrid integration platform --
 ----------------------------------------------------------
 
 To see how to use this template please visit

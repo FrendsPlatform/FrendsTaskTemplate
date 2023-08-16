@@ -10,9 +10,9 @@ You can learn more about custom Tasks [here](https://docs.frends.com/en/articles
 
 ## Prerequisite
 
-This template is based on .NET Core CLI tools, so you need to have .NET Core 2.1 SDK or newer. As it is having reaching end of support in 2021-08-21 it is preferably to use [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+This template is based on .NET Core CLI tools, so you need to have .NET Core 6.0 SDK or newer. As it is having reaching end of support in 2021-08-21 it is preferably to use [.NET Core 6.0 SDK]().https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 
-Frends tasks are mainly coded in C#, so you will also need a developing environment for it. Visual Studio, Visual Studio Code, and Rider the most widely used ones, but any text editor will do as you can compile from [console](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build). If you are using Visual Studio you can also use, to develop frends Task, old Non-SDK style project files, and MSBuild and nuget.exe technologies. This way you would not need .NET Core 2.1 SDK, but then you are not able to create cross-platform tasks, and creating that kind of C# projects is not supported by this template. 
+Frends tasks are mainly coded in C#, so you will also need a developing environment for it. Visual Studio, Visual Studio Code, and Rider the most widely used ones, but any text editor will do as you can compile from [console](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build). If you are using Visual Studio you can also use, to develop frends Task, old Non-SDK style project files, and MSBuild and nuget.exe technologies. This way you would not need .NET Core 2.1 SDK, but then you are not able to create cross-platform tasks, and creating that kind of C# projects is not supported by this template.
 
 Unfortunately, Visual Studio or other IDEs do not currently support dotnet new templates, so you need to use the command line to install the template and create new Tasks based on it.
 
