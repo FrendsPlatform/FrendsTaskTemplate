@@ -73,7 +73,7 @@
             "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
             "args": 
             {
-                "executable": "setup.cmd",
+                "executable": "setup.ps1",
                 "args": "",
                 "redirectStandardOutput": false,
                 "redirectStandardError": false
@@ -81,11 +81,11 @@
             "manualInstructions": 
             [
                 {
-                    "text": "Run 'setup.cmd'"
+                    "text": "Run 'setup.ps1'"
                 }
             ],
             "continueOnError": false,
-            "description": "setups the project by calling setup.cmd"
+            "description": "setups the project by calling setup.ps1"
         }
     ]
 }
