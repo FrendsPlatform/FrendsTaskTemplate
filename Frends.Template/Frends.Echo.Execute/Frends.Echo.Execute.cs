@@ -1,8 +1,4 @@
-﻿// <copyright file="Frends.Echo.Execute.cs" company="Frends">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace Frends.Echo.Execute;
+﻿namespace Frends.Echo.Execute;
 
 using System.ComponentModel;
 using System.Threading;

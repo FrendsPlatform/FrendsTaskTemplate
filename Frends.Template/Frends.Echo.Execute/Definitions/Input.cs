@@ -1,8 +1,4 @@
-﻿// <copyright file="Input.cs" company="Frends EiPaaS">
-// Copyright (c) Frends EiPaaS. All rights reserved.
-// </copyright>
-
-namespace Frends.Echo.Execute.Definitions;
+﻿namespace Frends.Echo.Execute.Definitions;
 
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;

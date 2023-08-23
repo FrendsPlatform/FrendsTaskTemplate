@@ -30,17 +30,7 @@ You can install the template by following the command.
 
 You can create a new Task by running the following command in the Task's repository folder.
 
-`dotnet new frendstasktemplate --name namespaceForTask --className classNameForTask --taskName TaskName --workflows TaskName`
-
-## Move workflows and .gitignore 
-
-Move workflows from the Task's folder to the .github directory inside the main directory.
-
-e.g.
-
---> Frends.Echo/.github/workflows/
-
-Move .gitignore file to the main folder or remove it if it already exists.
+`dotnet new frendstasktemplate --name namespaceForTask --className classNameForTask --taskName TaskName --workflows TaskName --allow-scripts yes`
 
 ## Get help using the template
 

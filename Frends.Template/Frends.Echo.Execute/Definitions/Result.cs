@@ -1,8 +1,4 @@
-﻿// <copyright file="Result.cs" company="Frends">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace Frends.Echo.Execute.Definitions;
+﻿namespace Frends.Echo.Execute.Definitions;
 
 /// <summary>
 /// Result class usually contains properties of the return object.

@@ -1,8 +1,4 @@
-﻿// <copyright file="Options.cs" company="Frends">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace Frends.Echo.Execute.Definitions;
+﻿namespace Frends.Echo.Execute.Definitions;
 
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
