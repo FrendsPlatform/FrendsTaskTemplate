@@ -26,9 +26,9 @@ You can install the template by following the command.
 
 `dotnet new -i frendstasktemplate --nuget-source https://pkgs.dev.azure.com/frends-platform/frends-tasks/_packaging/main/nuget/v3/index.json` 
 
-## Create a new custom task
+## Create a new Task
 
-You can create a new Task by the following command.
+You can create a new Task by running the following command in the Task's repository folder.
 
 `dotnet new frendstasktemplate --name namespaceForTask --className classNameForTask --taskName TaskName --workflows TaskName`
 

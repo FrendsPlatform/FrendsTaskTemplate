@@ -5,7 +5,7 @@
 namespace Frends.Echo.Execute.Definitions;
 
 /// <summary>
-/// Parameters class usually contains parameters that are required.
+/// Result class usually contains properties of the return object.
 /// </summary>
 public class Result
 {

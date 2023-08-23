@@ -8,7 +8,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 /// <summary>
-/// Parameters class usually contains parameters that are required.
+/// Options class usually contains parameters that are required.
 /// </summary>
 public class Options
 {

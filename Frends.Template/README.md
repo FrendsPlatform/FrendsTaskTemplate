@@ -28,3 +28,7 @@ Run the tests
 ### Create a NuGet package
 
 `dotnet pack --configuration Release`
+
+### Third-party licenses
+
+SonarAnalyzer.CSharp version (unmodified version 9.8.0.76515) used to analyze bugs, vulnerabilities and code smells uses LGPLv3, full text and source code can be found in https://github.com/SonarSource/sonar-dotnet.

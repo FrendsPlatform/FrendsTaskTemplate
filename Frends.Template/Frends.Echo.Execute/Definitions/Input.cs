@@ -1,5 +1,5 @@
-﻿// <copyright file="Input.cs" company="Frends">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// <copyright file="Input.cs" company="Frends EiPaaS">
+// Copyright (c) Frends EiPaaS. All rights reserved.
 // </copyright>
 
 namespace Frends.Echo.Execute.Definitions;
@@ -8,7 +8,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 /// <summary>
-/// Parameters class usually contains parameters that are required.
+/// Input class usually contains parameters that are required.
 /// </summary>
 public class Input
 {
