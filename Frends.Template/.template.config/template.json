@@ -76,7 +76,7 @@
               "redirectStandardError": false
             },
             "manualInstructions": [{
-               "text": "Run setup.cmd"
+               "text": "Run 'setup.cmd'"
             }],
             "continueOnError": false,
             "description ": "setups the project by calling setup.cmd"
