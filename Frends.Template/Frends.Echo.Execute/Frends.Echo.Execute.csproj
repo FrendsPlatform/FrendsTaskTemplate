@@ -13,7 +13,7 @@
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
 	  <Description>Description of the Task</Description>
 	  <PackageProjectUrl>https://frends.com/</PackageProjectUrl>
-	  <RepositoryUrl>https://github.com/FrendsPlatform/Frends.Files/tree/main/Frends.Echo.Execute</RepositoryUrl>
+	  <RepositoryUrl>https://github.com/FrendsPlatform/Frends.Echo/tree/main/Frends.Echo.Execute</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
