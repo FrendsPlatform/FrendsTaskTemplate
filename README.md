@@ -55,26 +55,32 @@ Options:
   -lang, --language   Filters templates based on language and specifies the language of the template to create.
   --update-check      Check the currently installed template packs for updates.
   --update-apply      Check the currently installed template packs for update, and install the updates.
+  --allow-scripts     Allows the post action bash script to be run. 
 
 
 Official Task template (C#)
 Author: Frends
 Options:
-  -t|--taskName
+
+  -n|--name
                             string - Optional
-                            Default: Task
+                            Default: Frends.Echo.Execute
+                            Description: Names the namespace with given name.
 
   -c|--className
                             string - Optional
-                            Default: Template
+                            Default: Echo
+                            Description: Names class with given name.
 
-  -au|--authors
+  -t|--taskName
                             string - Optional
-                            Default: Frends
+                            Default: Execute
+                            Description: Names task with given name.
 
-  -li|--license
+  -w|--workflows
                             string - Optional
-                            Default: MIT
+                            Default: Execute
+                            Description: Names workflows files with given name.
 
 ```
 

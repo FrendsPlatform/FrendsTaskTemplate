@@ -22,7 +22,7 @@
     <Content Include="Frends.Template\**\*" Exclude="Frends.Template.Task\**\bin\**;Frends.Template.Task\**\obj\**;**\.git\**;**\.vs\**" />
     <Compile Remove="**\*" />
 	
-  <Content Include="readme.txt">
+  <Content Include="README.md">
     <Pack>true</Pack>
     <PackagePath>\</PackagePath>
   </Content>

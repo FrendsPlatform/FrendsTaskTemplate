@@ -25,7 +25,6 @@ public static class Echo
         {
             // It is good to check the cancellation token somewhere you spend lot of time, e.g. in loops.
             cancellationToken.ThrowIfCancellationRequested();
-
             repeats[i] = input.Content;
         }
 

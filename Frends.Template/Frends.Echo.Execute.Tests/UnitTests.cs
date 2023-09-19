@@ -3,14 +3,11 @@ namespace Frends.Echo.Execute.Tests;
 using Frends.Echo.Execute.Definitions;
 using NUnit.Framework;
 
-/// <summary>
-/// Test class.
-/// </summary>
 [TestFixture]
-internal class TestClass
+internal class UnitTests
 {
     [Test]
-    public void ThreeEchos()
+    public void Test()
     {
         var input = new Input
         {

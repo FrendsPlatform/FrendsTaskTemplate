@@ -26,16 +26,6 @@
             "datatype": "string",
             "defaultValue": "Execute",
             "FileRename": "Execute"
-        },
-        "authors": {
-            "type": "parameter",
-            "defaultValue": "Frends",
-            "replaces": "Frends"
-        },
-        "license": {
-            "type": "parameter",
-            "defaultValue": "MIT",
-            "replaces": "MIT"
         }
     },
     "SpecialCustomOperations": {
@@ -70,6 +60,7 @@
     },
     "postActions": [
         {
+            "condition": "(OS == \"Windows_NT\")",
             "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
             "args": 
             {
@@ -86,6 +77,33 @@
             ],
             "continueOnError": false,
             "description": "setups the project by calling setup.cmd"
+        },
+        {
+            "condition": "(OS != \"Windows_NT\")",
+            "description": "Make scripts executable",
+            "manualInstructions": [{
+              "text": "Run 'chmod +x setup.sh'"
+            }],
+            "actionId": "cb9a6cf3-4f5c-4860-b9d2-03a574959774",
+            "args": {
+              "+x": "setup.sh"
+            },
+            "continueOnError": true
+        },
+        {
+            "condition": "(OS != \"Windows_NT\")",
+            "description": "setups the project by calling setup.sh",
+            "manualInstructions": [{
+                    "text": "Run 'bash ./setup.sh'"
+            }],
+            "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+            "args": {
+                "+x": "setup.sh",
+                "executable": "setup.sh",
+                "redirectStandardOutput": false,
+                "redirectStandardError": false
+            },
+            "continueOnError": false
         }
     ]
 }
