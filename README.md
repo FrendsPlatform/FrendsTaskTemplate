@@ -92,7 +92,13 @@ Options:
 
 `dotnet new -u frendstasktemplate`
 
-## Building this repository
+## Developing the template
+
+To develop this template you can pull the repository
+
+`git pull https://github.com/FrendsPlatform/FrendsTaskTemplate.git`
+
+To test the changes you can pack a new nuget from the root folder:
 
 `dotnet pack`
 
@@ -101,7 +107,6 @@ This command will build the project and create a NuGet package in .\bin\Debug
 To install this template from locally created NuGet package use
 
 `dotnet new -i <ABSOLUTE_PATH_TO_NUPKG_FILE>`
-
 
 ## Special notes about this repository
 
