@@ -1,4 +1,4 @@
-name: Execute_build_main
+name: Execute_build_test
 
 on:
   push:
