@@ -1,4 +1,4 @@
-name: ConvertToJson_build_main
+name: Execute_build_test
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    uses: FrendsPlatform/FrendsTasks/.github/workflows/linux_build_main.yml@main
+    uses: FrendsPlatform/FrendsTasks/.github/workflows/linux_build_test.yml@main
     with:
       workdir: Frends.Echo.Execute
     secrets:
