@@ -26,7 +26,15 @@
             "datatype": "string",
             "defaultValue": "Execute",
             "FileRename": "Execute"
-        }
+        },
+        "CurrentDate":{
+            "type": "generated",
+            "generator": "now",
+            "parameters": {
+              "format": "yyyy-MM-dd"
+            },
+            "replaces": "2023-08-08"
+          }
     },
     "SpecialCustomOperations": {
         "**/*.md": {

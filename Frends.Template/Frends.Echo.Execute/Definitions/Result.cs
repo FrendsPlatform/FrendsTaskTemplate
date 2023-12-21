@@ -13,6 +13,6 @@ public class Result
     /// <summary>
     /// Contains the input repeated the specified number of times.
     /// </summary>
-    /// <example>Example of the output.</example>
+    /// <example>Example of the output</example>
     public string Output { get; private set; }
 }
