@@ -11,14 +11,14 @@ public class Options
     /// <summary>
     /// Number of times input is repeated.
     /// </summary>
-    /// <example>Example of the parameter value.</example>
+    /// <example>Example of the parameter value</example>
     [DefaultValue(3)]
     public int Amount { get; set; }
 
     /// <summary>
     /// How repeats of the input are separated.
     /// </summary>
-    /// <example>Example of the parameter value.</example>
+    /// <example>Example of the parameter value</example>
     [DisplayFormat(DataFormatString = "Text")]
     [DefaultValue(" ")]
     public string Delimiter { get; set; }
