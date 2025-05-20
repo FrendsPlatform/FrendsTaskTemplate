@@ -1,7 +1,7 @@
 ﻿{
-	"Tasks": [
-		{
-			"TaskMethod": "Frends.Echo.Execute.Echo.Execute"
-		}
-	]
+  "Tasks": [
+    {
+      "TaskMethod": "Frends.Echo.Execute.Echo.Execute"
+    }
+  ]
 }

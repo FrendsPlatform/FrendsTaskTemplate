@@ -4,7 +4,7 @@ on:
   push:
     branches-ignore:
       - main
-    
+
 env:
   azure_artifacts_feed_url: https://pkgs.dev.azure.com/frends-platform/frends-tasks/_packaging/test/nuget/v3/index.json
 
@@ -13,18 +13,18 @@ jobs:
     name: AutoBuild on ubuntu-latest
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+      - uses: actions/checkout@v1
 
-    - name: Pack release version
-      run: dotnet pack --configuration Release
-      
-    # Setup dotnet again with test feed
-    - uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '6.0.x'
-        source-url: ${{ env.azure_artifacts_feed_url }}
-      env:
-        NUGET_AUTH_TOKEN: ${{ secrets.TASKS_TEST_FEED_API_KEY }}
-    # Push the package to the test feed
-    - name: Push NuGet package(s) to the test feed
-      run: dotnet nuget push bin/Release/frendstasktemplate.*.nupkg --api-key ${{ secrets.TASKS_TEST_FEED_API_KEY }} --source ${{ env.azure_artifacts_feed_url }} --skip-duplicate
+      - name: Pack release version
+        run: dotnet pack --configuration Release
+
+      # Setup dotnet again with test feed
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+          source-url: ${{ env.azure_artifacts_feed_url }}
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.TASKS_TEST_FEED_API_KEY }}
+      # Push the package to the test feed
+      - name: Push NuGet package(s) to the test feed
+        run: dotnet nuget push bin/Release/frendstasktemplate.*.nupkg --api-key ${{ secrets.TASKS_TEST_FEED_API_KEY }} --source ${{ env.azure_artifacts_feed_url }} --skip-duplicate
