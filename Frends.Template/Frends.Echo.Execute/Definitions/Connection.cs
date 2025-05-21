@@ -11,7 +11,7 @@ namespace Frends.Echo.Execute.Definitions;
 public class Connection
 {
     /// <summary>
-    /// Connection string to *service*.
+    /// Connection string to the target service (e.g., database, API endpoint).
     /// </summary>
     /// <example>Host=127.0.0.1;Port=5432</example>
     [DisplayFormat(DataFormatString = "Text")]
