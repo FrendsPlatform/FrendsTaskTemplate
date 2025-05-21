@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace Frends.Echo.Execute.Tests;
 
 [TestFixture]
-internal class UnitTests
+public class UnitTests
 {
     [Test]
     public void ShouldRepeatContentWithDelimiter()
