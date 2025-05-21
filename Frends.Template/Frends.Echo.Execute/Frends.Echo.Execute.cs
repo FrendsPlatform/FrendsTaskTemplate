@@ -13,7 +13,7 @@ public static class Echo
 {
     /// <summary>
     /// Echoes the input string the specified number of times.
-    /// [Documentation](https://tasks.frends.com/tasks/Frends-Echo-Execute)
+    /// [Documentation](https://tasks.frends.com/tasks/frends-tasks/Frends-Echo-Execute)
     /// </summary>
     /// <param name="input">Essential parameters.</param>
     /// <param name="connection">Connection parameters.</param>
