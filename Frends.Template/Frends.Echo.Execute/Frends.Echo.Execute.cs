@@ -45,8 +45,16 @@ public static class Echo
                 Error = null,
             };
         }
-        catch (Exception e) when (!options.ThrowErrorOnFailure && e is not OperationCanceledException)
+        catch (Exception e) when (e is not OperationCanceledException)
         {
+            if (options.ThrowErrorOnFailure)
+            {
+                if (string.IsNullOrEmpty(options.ErrorMessageOnFailure))
+                    throw;
+
+                throw new Exception(options.ErrorMessageOnFailure, e);
+            }
+
             var errorMessage = !string.IsNullOrEmpty(options.ErrorMessageOnFailure)
                 ? options.ErrorMessageOnFailure
                 : e.Message;
