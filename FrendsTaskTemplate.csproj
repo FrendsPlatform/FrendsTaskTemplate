@@ -9,7 +9,7 @@
         <Description>Template for creating Frends Tasks.</Description>
         <PackageProjectUrl>https://github.com/FrendsPlatform/FrendsTasksTemplate</PackageProjectUrl>
         <PackageTags>dotnet-new;templates;frends</PackageTags>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
 
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
