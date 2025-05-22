@@ -26,6 +26,6 @@ public class Options
     /// Overrides the error message on failure.
     /// </summary>
     [DisplayFormat(DataFormatString = "Text")]
-    [DefaultValue(null)]
+    [DefaultValue("")]
     public string ErrorMessageOnFailure { get; set; }
 }
