@@ -7,7 +7,7 @@
         <Title>Frends Task template</Title>
         <Authors>Frends</Authors>
         <Description>Template for creating Frends Tasks.</Description>
-        <PackageProjectUrl>https://github.com/FrendsPlatform/FrendsTasksTemplate</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/FrendsPlatform/FrendsTaskTemplate</PackageProjectUrl>
         <PackageTags>dotnet-new;templates;frends</PackageTags>
         <TargetFramework>net6.0</TargetFramework>
 
