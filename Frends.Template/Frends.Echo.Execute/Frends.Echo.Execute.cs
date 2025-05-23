@@ -1,35 +1,77 @@
-﻿namespace Frends.Echo.Execute;
-
+﻿using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Threading;
 using Frends.Echo.Execute.Definitions;
 
+namespace Frends.Echo.Execute;
+
 /// <summary>
-/// Main class of the Task.
+/// Task class.
 /// </summary>
 public static class Echo
 {
     /// <summary>
-    /// This is Task.
-    /// [Documentation](https://tasks.frends.com/tasks/frends-tasks/Frends.Echo.Execute).
+    /// Echoes the input string the specified number of times.
+    /// [Documentation](https://tasks.frends.com/tasks/frends-tasks/Frends-Echo-Execute)
     /// </summary>
-    /// <param name="input">What to repeat.</param>
-    /// <param name="options">Define if repeated multiple times. </param>
-    /// <param name="cancellationToken">Cancellation token given by Frends.</param>
-    /// <returns>Object { string Output }.</returns>
-    public static Result Execute([PropertyTab] Input input, [PropertyTab] Options options, CancellationToken cancellationToken)
+    /// <param name="input">Essential parameters.</param>
+    /// <param name="connection">Connection parameters.</param>
+    /// <param name="options">Additional parameters.</param>
+    /// <param name="cancellationToken">A cancellation token provided by Frends Platform.</param>
+    /// <returns>object { bool Success, string Output, object Error { string Message, dynamic AdditionalInfo } }</returns>
+    // TODO: Remove Connection parameter if the task does not make connections
+    public static Result Execute(
+        [PropertyTab] Input input,
+        [PropertyTab] Connection connection,
+        [PropertyTab] Options options,
+        CancellationToken cancellationToken)
     {
-        var repeats = new string[options.Amount];
-
-        for (var i = 0; i < options.Amount; i++)
+        try
         {
-            // It is good to check the cancellation token somewhere you spend lot of time, e.g. in loops.
+            // TODO: Do something with connection parameters, e.g., connect to a service.
+            _ = connection.ConnectionString;
+
+            // Cancellation token should be provided to methods that support it
+            // and checked during long-running operations, e.g., loops
             cancellationToken.ThrowIfCancellationRequested();
-            repeats[i] = input.Content;
+
+            var output = string.Join(options.Delimiter, Enumerable.Repeat(input.Content, input.Repeat));
+
+            return new Result
+            {
+                Success = true,
+                Output = output,
+                Error = null,
+            };
         }
+        catch (Exception e) when (e is not OperationCanceledException)
+        {
+            if (options.ThrowErrorOnFailure)
+            {
+                if (string.IsNullOrEmpty(options.ErrorMessageOnFailure))
+                    throw;
 
-        var output = new Result(string.Join(options.Delimiter, repeats));
+                throw new Exception(options.ErrorMessageOnFailure, e);
+            }
 
-        return output;
+            var errorMessage = !string.IsNullOrEmpty(options.ErrorMessageOnFailure)
+                ? options.ErrorMessageOnFailure
+                : e.Message;
+
+            return new Result
+            {
+                Success = false,
+                Output = null,
+                Error = new Error
+                {
+                    Message = errorMessage,
+                    AdditionalInfo = new
+                    {
+                        Exception = e,
+                    },
+                },
+            };
+        }
     }
 }

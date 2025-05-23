@@ -1,5 +1,7 @@
 # Changelog
 
-## [1.0.0] - 2023-08-08
+## [1.0.0] - GeneratedDate
+
 ### Changed
+
 - Initial implementation

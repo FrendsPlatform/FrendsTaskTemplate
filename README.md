@@ -1,30 +1,36 @@
-# Frends Task Template
+# Frends Task template
 
-![](https://github.com/FrendsPlatform/FrendsTasksTemplate/workflows/AutoBuildMAster/badge.svg) ![NuGet](https://img.shields.io/nuget/v/frendstask) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![BuildMaster](https://github.com/FrendsPlatform/FrendsTaskTemplate/actions/workflows/BuildMaster.yml/badge.svg)](https://github.com/FrendsPlatform/FrendsTaskTemplate/actions/workflows/BuildMaster.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-This template can be used to create new Official Tasks for [Frends](frends.com) integration platform. This enables you to start writing code without any hassle with project formats etc.
-
-The created C# solution will use the new tool chain (dotnet new etc.) from .NET Core SDK to ensure cross-platform compatibility. 
+This template can be used to create new .NET (previously .NET Core) Tasks for [Frends](https://frends.com) integration
+platform. This enables you to start writing code without any hassle with project formats etc.
 
 You can learn more about custom Tasks [here](https://docs.frends.com/en/articles/2206746-custom-tasks).
 
 ## Prerequisite
 
-This template is based on .NET Core CLI tools, so you need to have .NET Core 6.0 SDK or newer. As it is having reaching end of support in 2021-08-21 it is preferably to use [.NET Core 6.0 SDK]().https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+You will need the [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet), at
+minimum [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) is required. Since .NET 6.0 is EOL as of
+2024-11-12, you should ideally use a newer version of the SDK, but Tasks should still target .NET 6.0 for the time
+being.
 
-Frends tasks are mainly coded in C#, so you will also need a developing environment for it. Visual Studio, Visual Studio Code, and Rider the most widely used ones, but any text editor will do as you can compile from [console](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build). If you are using Visual Studio you can also use, to develop frends Task, old Non-SDK style project files, and MSBuild and nuget.exe technologies. This way you would not need .NET Core 2.1 SDK, but then you are not able to create cross-platform tasks, and creating that kind of C# projects is not supported by this template.
+Frends Tasks are usually written in C#, for the best experience you will want a compatible integrated development
+environment (IDE), some common examples are Visual Studio, Visual Studio Code and JetBrains Rider. You can also use any
+text editor and the [dotnet](https://learn.microsoft.com/en-us/dotnet/core/tools/) command-line interface.
 
-Unfortunately, Visual Studio or other IDEs do not currently support dotnet new templates, so you need to use the command line to install the template and create new Tasks based on it.
-
-## Clone repository
-
-First you need to clone the repository for the new Task. After cloning move to that folder.
+Some IDEs allow you to install the template to the project wizard but can always
+use [dotnet new](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) command when that is not possible.
 
 ## Install the template
 
-You can install the template by following the command.
+You can install the template using the following command.
 
-`dotnet new -i frendstasktemplate --nuget-source https://pkgs.dev.azure.com/frends-platform/frends-tasks/_packaging/main/nuget/v3/index.json` 
+`dotnet new install frendstasktemplate --nuget-source https://pkgs.dev.azure.com/frends-platform/frends-tasks/_packaging/main/nuget/v3/index.json`
+
+## Clone repository
+
+You need to clone the repository for the new Task. After cloning, move to that folder.
 
 ## Create a new Task
 
@@ -39,76 +45,54 @@ You can create a new Task by running the following command in the Task's reposit
 Example output:
 
 ```
-Usage: new [options]
-
-Options:
-  -h, --help          Displays help for this command.
-  -l, --list          Lists templates containing the specified name. If no name is specified, lists all templates.
-  -n, --name          The name for the output being created. If no name is specified, the name of the current directory is used.
-  -o, --output        Location to place the generated output.
-  -i, --install       Installs a source or a template pack.
-  -u, --uninstall     Uninstalls a source or a template pack.
-  --nuget-source      Specifies a NuGet source to use during install.
-  --type              Filters templates based on available types. Predefined values are "project", "item" or "other".
-  --dry-run           Displays a summary of what would happen if the given command line were run if it would result in a template creation.
-  --force             Forces content to be generated even if it would change existing files.
-  -lang, --language   Filters templates based on language and specifies the language of the template to create.
-  --update-check      Check the currently installed template packs for updates.
-  --update-apply      Check the currently installed template packs for update, and install the updates.
-  --allow-scripts     Allows the post action bash script to be run. 
-
-
-Official Task template (C#)
+Frends Task (C#)
 Author: Frends
+
+Usage:
+  dotnet new frendstasktemplate [options] [template options]
+
 Options:
+  -n, --name <name>                The name for the output being created. If no name is specified, the name of the
+                                   output directory is used.
+  -o, --output <output>            Location to place the generated output.
+  --dry-run                        Displays a summary of what would happen if the given command line were run if it
+                                   would result in a template creation.
+  --force                          Forces content to be generated even if it would change existing files.
+  --no-update-check                Disables checking for the template package updates when instantiating a template.
+  --project <project>              The project that should be used for context evaluation.
+  -lang, --language <C#>           Specifies the template language to instantiate.
+  --type <solution>                Specifies the template type to instantiate.
+  --allow-scripts <No|Prompt|Yes>  Specifies if post action scripts should run. [default: Prompt]
 
-  -n|--name
-                            string - Optional
-                            Default: Frends.Echo.Execute
-                            Description: Names the namespace with given name.
-
-  -c|--className
-                            string - Optional
-                            Default: Echo
-                            Description: Names class with given name.
-
-  -t|--taskName
-                            string - Optional
-                            Default: Execute
-                            Description: Names task with given name.
-
-  -w|--workflows
-                            string - Optional
-                            Default: Execute
-                            Description: Names workflows files with given name.
-
+Template options:
+  -ta, --taskName <taskName>   Type: string
+                               Default: Execute
+  -c, --className <className>  Type: string
+                               Default: Echo
+  -w, --workflows <workflows>  Type: string
+                               Default: Execute
 ```
 
 ## Update the template
 
-`dotnet new frendstasktemplate --update-apply `
+`dotnet new frendstasktemplate --update-apply`
 
 ## Uninstall the template
 
-`dotnet new -u frendstasktemplate`
+`dotnet new uninstall frendstasktemplate`
 
 ## Developing the template
 
-To develop this template you can pull the repository
+To develop this template, you can pull the repository.
 
 `git pull https://github.com/FrendsPlatform/FrendsTaskTemplate.git`
 
-To test the changes you can pack a new nuget from the root folder:
+To test the changes, you can pack a new nuget from the root folder:
 
 `dotnet pack`
 
-This command will build the project and create a NuGet package in .\bin\Debug 
+This command will build the project and create a NuGet package in .\bin\Debug
 
-To install this template from locally created NuGet package use
+To install this template from a locally created NuGet package use
 
-`dotnet new -i <ABSOLUTE_PATH_TO_NUPKG_FILE>`
-
-## Special notes about this repository
-
-URL https://github.com/FrendsPlatform/FrendsTaskTemplate  redirects here 
-
+`dotnet new install <ABSOLUTE_PATH_TO_NUPKG_FILE>`

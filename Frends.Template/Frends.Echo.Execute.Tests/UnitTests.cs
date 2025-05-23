@@ -1,27 +1,23 @@
-namespace Frends.Echo.Execute.Tests;
-
+using System.Threading;
 using Frends.Echo.Execute.Definitions;
 using NUnit.Framework;
 
+namespace Frends.Echo.Execute.Tests;
+
 [TestFixture]
-internal class UnitTests
+public class UnitTests
 {
     [Test]
-    public void Test()
+    public void ShouldRepeatContentWithDelimiter()
     {
-        var input = new Input
-        {
-            Content = "foobar",
-        };
+        var input = new Input { Content = "foobar", Repeat = 3 };
 
-        var options = new Options
-        {
-            Amount = 3,
-            Delimiter = ", ",
-        };
+        var connection = new Connection { ConnectionString = "Host=127.0.0.1;Port=12345" };
 
-        var ret = Echo.Execute(input, options, default);
+        var options = new Options { Delimiter = ", ", ThrowErrorOnFailure = true, ErrorMessageOnFailure = null };
 
-        Assert.That(ret.Output, Is.EqualTo("foobar, foobar, foobar"));
+        var result = Echo.Execute(input, connection, options, CancellationToken.None);
+
+        Assert.That(result.Output, Is.EqualTo("foobar, foobar, foobar"));
     }
 }
