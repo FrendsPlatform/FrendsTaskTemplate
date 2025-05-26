@@ -56,7 +56,7 @@ public static class Echo
             }
 
             var errorMessage = !string.IsNullOrEmpty(options.ErrorMessageOnFailure)
-                ? options.ErrorMessageOnFailure
+                ? $"{options.ErrorMessageOnFailure}: {e.Message}"
                 : e.Message;
 
             return new Result
