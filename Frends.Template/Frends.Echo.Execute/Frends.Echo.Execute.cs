@@ -50,7 +50,7 @@ public static class Echo
             if (options.ThrowErrorOnFailure)
             {
                 if (string.IsNullOrEmpty(options.ErrorMessageOnFailure))
-                    throw;
+                    throw new Exception(e.Message, e);
 
                 throw new Exception(options.ErrorMessageOnFailure, e);
             }
