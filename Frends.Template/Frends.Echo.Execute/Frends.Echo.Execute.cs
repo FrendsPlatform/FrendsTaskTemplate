@@ -50,13 +50,13 @@ public static class Echo
             if (options.ThrowErrorOnFailure)
             {
                 if (string.IsNullOrEmpty(options.ErrorMessageOnFailure))
-                    throw;
+                    throw new Exception(e.Message, e);
 
                 throw new Exception(options.ErrorMessageOnFailure, e);
             }
 
             var errorMessage = !string.IsNullOrEmpty(options.ErrorMessageOnFailure)
-                ? options.ErrorMessageOnFailure
+                ? $"{options.ErrorMessageOnFailure}: {e.Message}"
                 : e.Message;
 
             return new Result
