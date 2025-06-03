@@ -11,9 +11,7 @@ You can learn more about custom Tasks [here](https://docs.frends.com/en/articles
 ## Prerequisite
 
 You will need the [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet), at
-minimum [.NET SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) is required. Since .NET 6.0 is EOL as of
-2024-11-12, you should ideally use a newer version of the SDK, but Tasks should still target .NET 6.0 for the time
-being.
+minimum [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) is required.
 
 Frends Tasks are usually written in C#, for the best experience you will want a compatible integrated development
 environment (IDE), some common examples are Visual Studio, Visual Studio Code and JetBrains Rider. You can also use any
