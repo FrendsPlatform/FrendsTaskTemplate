@@ -73,7 +73,7 @@ Template options:
 
 ## Update the template
 
-`dotnet new frendstasktemplate --update-apply`
+`dotnet new update`
 
 ## Uninstall the template
 
