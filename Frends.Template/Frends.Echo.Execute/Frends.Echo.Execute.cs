@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Threading;
 using Frends.Echo.Execute.Definitions;
+using Frends.Echo.Execute.Helpers;
 
 namespace Frends.Echo.Execute;
 
@@ -36,6 +37,9 @@ public static class Echo
             // and checked during long-running operations, e.g., loops
             cancellationToken.ThrowIfCancellationRequested();
 
+            if (input.Repeat < 0)
+                throw new Exception("Repeat count cannot be negative.");
+
             var output = string.Join(options.Delimiter, Enumerable.Repeat(input.Content, input.Repeat));
 
             return new Result
@@ -45,33 +49,9 @@ public static class Echo
                 Error = null,
             };
         }
-        catch (Exception e) when (e is not OperationCanceledException)
+        catch (Exception ex)
         {
-            if (options.ThrowErrorOnFailure)
-            {
-                if (string.IsNullOrEmpty(options.ErrorMessageOnFailure))
-                    throw new Exception(e.Message, e);
-
-                throw new Exception(options.ErrorMessageOnFailure, e);
-            }
-
-            var errorMessage = !string.IsNullOrEmpty(options.ErrorMessageOnFailure)
-                ? $"{options.ErrorMessageOnFailure}: {e.Message}"
-                : e.Message;
-
-            return new Result
-            {
-                Success = false,
-                Output = null,
-                Error = new Error
-                {
-                    Message = errorMessage,
-                    AdditionalInfo = new
-                    {
-                        Exception = e,
-                    },
-                },
-            };
+            return ErrorHandler.Handle(ex, options);
         }
     }
 }
