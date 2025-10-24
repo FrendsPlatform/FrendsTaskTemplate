@@ -14,22 +14,29 @@
   "sourceName": "Frends.Echo.Execute",
   "preferNameDirectory": true,
   "symbols": {
-    "taskName": {
+    "FullTaskName": {
       "type": "parameter",
       "datatype": "string",
-      "defaultValue": "Execute",
-      "replaces": "Execute"
+      "defaultValue": "Frends.Echo.Execute",
+      "replaces": "Frends.Echo.Execute",
+      "description": "Full name in format: Frends.ClassName.MethodName"
     },
     "className": {
-      "type": "parameter",
-      "datatype": "string",
-      "defaultValue": "Echo",
+      "type": "derived",
+      "valueSource": "FullTaskName",
+      "valueTransform": "GetClassName",
       "replaces": "Echo"
     },
+    "taskName": {
+      "type": "derived",
+      "valueSource": "FullTaskName",
+      "valueTransform": "GetMethodName",
+      "replaces": "Execute"
+    },
     "workflows": {
-      "type": "parameter",
-      "datatype": "string",
-      "defaultValue": "Execute",
+      "type": "derived",
+      "valueSource": "FullTaskName",
+      "valueTransform": "GetMethodName",
       "FileRename": "Execute"
     },
     "CurrentDate": {
@@ -47,6 +54,18 @@
         "format": "yyyy"
       },
       "replaces": "GeneratedYear"
+    }
+  },
+  "forms": {
+    "GetClassName": {
+      "identifier": "replace",
+      "pattern": "^.*\\.([^.]+)\\.[^.]+$",
+      "replacement": "$1"
+    },
+    "GetMethodName": {
+      "identifier": "replace",
+      "pattern": "^.*\\.([^.]+)$",
+      "replacement": "$1"
     }
   },
   "SpecialCustomOperations": {

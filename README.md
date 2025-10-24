@@ -34,7 +34,7 @@ You need to clone the repository for the new Task. After cloning, move to that f
 
 You can create a new Task by running the following command in the Task's repository folder.
 
-`dotnet new frendstasktemplate --name namespaceForTask --className classNameForTask --taskName TaskName --workflows TaskName --allow-scripts yes`
+`dotnet new frendstasktemplate --FullTaskName Frends.ClassName.TaskName --allow-scripts yes`
 
 ## Get help using the template
 
@@ -63,12 +63,9 @@ Options:
   --allow-scripts <No|Prompt|Yes>  Specifies if post action scripts should run. [default: Prompt]
 
 Template options:
-  -ta, --taskName <taskName>   Type: string
-                               Default: Execute
-  -c, --className <className>  Type: string
-                               Default: Echo
-  -w, --workflows <workflows>  Type: string
-                               Default: Execute
+  --FullTaskName <FullTaskName>    Full name in format: Frends.ClassName.TaskName
+                                   Type: string
+                                   Default: Frends.Echo.Execute
 ```
 
 ## Update the template

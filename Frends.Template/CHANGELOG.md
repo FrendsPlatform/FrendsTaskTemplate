@@ -2,6 +2,6 @@
 
 ## [1.0.0] - GeneratedDate
 
-### Changed
+### Added
 
 - Initial implementation

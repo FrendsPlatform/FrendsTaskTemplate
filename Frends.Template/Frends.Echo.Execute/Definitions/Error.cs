@@ -1,3 +1,5 @@
+using System;
+
 namespace Frends.Echo.Execute.Definitions;
 
 /// <summary>
@@ -14,7 +16,7 @@ public class Error
     /// <summary>
     /// Additional information about the error.
     /// </summary>
-    /// <example>object { Exception Exception }</example>
+    /// <example>object { Exception AdditionalInfo }</example>
     // TODO: Add task specific additional information. Strong typing is recommended when reasonable.
-    public dynamic AdditionalInfo { get; set; }
+    public Exception AdditionalInfo { get; set; }
 }

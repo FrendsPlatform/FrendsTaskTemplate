@@ -31,9 +31,21 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="FrendsTaskMetadata.json" Pack="true" PackagePath="/">
+		<AdditionalFiles Include="FrendsTaskMetadata.json" Pack="true" PackagePath="/">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
+        </AdditionalFiles>
     </ItemGroup>
+	
+	<ItemGroup>
+		<Content Include="migration.json" PackagePath="/" Pack="true" />
+		<Content Include="../CHANGELOG.md" PackagePath="/" Pack="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FrendsTaskAnalyzers" Version="*">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
 
 </Project>
