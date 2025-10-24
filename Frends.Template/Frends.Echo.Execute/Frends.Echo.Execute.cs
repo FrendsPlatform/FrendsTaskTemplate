@@ -8,7 +8,7 @@ using Frends.Echo.Execute.Helpers;
 namespace Frends.Echo.Execute;
 
 /// <summary>
-/// Task class.
+/// Task Class for Echo operations.
 /// </summary>
 public static class Echo
 {
@@ -20,7 +20,7 @@ public static class Echo
     /// <param name="connection">Connection parameters.</param>
     /// <param name="options">Additional parameters.</param>
     /// <param name="cancellationToken">A cancellation token provided by Frends Platform.</param>
-    /// <returns>object { bool Success, string Output, object Error { string Message, dynamic AdditionalInfo } }</returns>
+    /// <returns>object { bool Success, string Output, object Error { string Message, Exception AdditionalInfo } }</returns>
     // TODO: Remove Connection parameter if the task does not make connections
     public static Result Execute(
         [PropertyTab] Input input,
@@ -51,7 +51,7 @@ public static class Echo
         }
         catch (Exception ex)
         {
-            return ErrorHandler.Handle(ex, options);
+            return ErrorHandler.Handle(ex, options.ThrowErrorOnFailure, options.ErrorMessageOnFailure);
         }
     }
 }
