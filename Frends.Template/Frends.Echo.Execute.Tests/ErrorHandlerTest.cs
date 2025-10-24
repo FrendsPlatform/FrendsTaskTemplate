@@ -9,7 +9,7 @@ namespace Frends.Echo.Execute.Tests;
 [TestFixture]
 public class ErrorHandlerTest
 {
-    private const string CustomErrorMessage = "CustomErrorMessasge";
+    private const string CustomErrorMessage = "CustomErrorMessage";
 
     [Test]
     public void Should_Throw_Error_When_ThrowErrorOnFailure_Is_True()
