@@ -12,6 +12,9 @@
     "type": "solution"
   },
   "sourceName": "Frends.Echo.Execute",
+  "renameFiles": {
+    "gitignore": ".gitignore"
+  },
   "symbols": {
     "Description": {
       "type": "parameter",
