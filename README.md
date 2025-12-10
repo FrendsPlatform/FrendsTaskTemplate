@@ -34,38 +34,39 @@ You need to clone the repository for the new Task. After cloning, move to that f
 
 You can create a new Task by running the following command in the Task's repository folder.
 
-`dotnet new frendstasktemplate --FullTaskName Frends.ClassName.TaskName --allow-scripts yes`
+`dotnet new frendstasktemplate -F Frends.ClassName.MethodName -D "Description of the Task"`
 
 ## Get help using the template
 
 `dotnet new frendstasktemplate -h`
 
-Example output:
+### Example output:
 
 ```
 Frends Task (C#)
 Author: Frends
 
 Usage:
-  dotnet new frendstasktemplate [options] [template options]
+  dotnet new frends-task [options] [template options]
 
 Options:
-  -n, --name <name>                The name for the output being created. If no name is specified, the name of the
-                                   output directory is used.
-  -o, --output <output>            Location to place the generated output.
-  --dry-run                        Displays a summary of what would happen if the given command line were run if it
-                                   would result in a template creation.
-  --force                          Forces content to be generated even if it would change existing files.
-  --no-update-check                Disables checking for the template package updates when instantiating a template.
-  --project <project>              The project that should be used for context evaluation.
-  -lang, --language <C#>           Specifies the template language to instantiate.
-  --type <solution>                Specifies the template type to instantiate.
-  --allow-scripts <No|Prompt|Yes>  Specifies if post action scripts should run. [default: Prompt]
+  -n, --name <name>       The name for the output being created. If no name is specified, the name of the output directory is used.
+  -o, --output <output>   Location to place the generated output.
+  --dry-run               Displays a summary of what would happen if the given command line were run if it would result in a template creation.
+  --force                 Forces content to be generated even if it would change existing files.
+  --no-update-check       Disables checking for the template package updates when instantiating a template.
+  --project <project>     The project that should be used for context evaluation.
+  -lang, --language <C#>  Specifies the template language to instantiate.
+  --type <solution>       Specifies the template type to instantiate.
 
 Template options:
-  --FullTaskName <FullTaskName>    Full name in format: Frends.ClassName.TaskName
-                                   Type: string
-                                   Default: Frends.Echo.Execute
+  -D, --Description <Description>    Description of what the Task will do.
+                                     Type: string
+                                     Default: Description of the Task
+  -F, --FullTaskName <FullTaskName>  Full name in format: Company.System.Action e.g. Frends.Xml.Write
+                                     Required: *true*
+                                     Type: string
+                                     Default: Frends.Echo.Execute
 ```
 
 ## Update the template
