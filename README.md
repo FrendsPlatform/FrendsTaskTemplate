@@ -34,11 +34,11 @@ You need to clone the repository for the new Task. After cloning, move to that f
 
 You can create a new Task by running the following command in the Task's repository folder.
 
-`dotnet new frendstasktemplate -F Frends.ClassName.MethodName -D "Description of the Task"`
+`dotnet new frends-task -F Frends.ClassName.MethodName -D "Description of the Task"`
 
 ## Get help using the template
 
-`dotnet new frendstasktemplate -h`
+`dotnet new frends-task -h`
 
 ### Example output:
 

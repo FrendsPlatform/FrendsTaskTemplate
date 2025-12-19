@@ -18,7 +18,7 @@ public static class Echo
     /// </summary>
     /// <param name="input">Essential parameters.</param>
     /// <param name="connection">Connection parameters.</param>
-    /// <param name="options">x.</param>
+    /// <param name="options">Additional parameters.</param>
     /// <param name="cancellationToken">A cancellation token provided by Frends Platform.</param>
     /// <returns>object { bool Success, string Output, object Error { string Message, Exception AdditionalInfo } }</returns>
     // TODO: Remove Connection parameter if the task does not make connections
