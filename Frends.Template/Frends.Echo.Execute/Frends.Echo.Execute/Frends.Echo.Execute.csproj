@@ -14,6 +14,9 @@
         <PackageProjectUrl>https://frends.com/</PackageProjectUrl>
         <RepositoryUrl>https://github.com/FrendsPlatform/Frends.Echo/tree/main/Frends.Echo.Execute</RepositoryUrl>
         <Nullable>disable</Nullable>
+        <NoWarn>
+            CS1591, <!-- StyleCop SA1602 already enforces documentation for enum members -->
+        </NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
