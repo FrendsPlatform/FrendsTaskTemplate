@@ -1,4 +1,6 @@
 name: BuildMaster
+permissions:
+  contents: read
 
 on:
   push:
@@ -13,14 +15,14 @@ jobs:
     name: Build master on ubuntu-latest
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v6.0.1
 
       - name: Pack release version
         run: dotnet pack --configuration Release
 
-      - uses: actions/setup-dotnet@v4.3.1
+      - uses: actions/setup-dotnet@v5.0.1
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '8.0.x'
           source-url: ${{ env.azure_artifacts_feed_url }}
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.TASKS_FEED_API_KEY }}
