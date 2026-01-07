@@ -14,7 +14,7 @@ You will need the [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
 minimum [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) is required.
 
 Frends Tasks are usually written in C#, for the best experience you will want a compatible integrated development
-environment (IDE), some common examples are Visual Studio, Visual Studio Code and JetBrains Rider. You can also use any
+environment (IDE); some common examples are Visual Studio, Visual Studio Code and JetBrains Rider. You can also use any
 text editor and the [dotnet](https://learn.microsoft.com/en-us/dotnet/core/tools/) command-line interface.
 
 Some IDEs allow you to install the template to the project wizard but can always
