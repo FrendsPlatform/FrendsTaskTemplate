@@ -5,14 +5,8 @@ using NUnit.Framework;
 namespace Frends.Echo.Execute.Tests;
 
 [TestFixture]
-public class IntegrationTests : TestBase
+public class FunctionalTests : TestBase
 {
-    [Test]
-    public void TestEnvironmentVariables()
-    {
-        Assert.That(SecretKey, Is.EqualTo("example"), SecretKey);
-    }
-
     [Test]
     public void ShouldRepeatContentWithDelimiter()
     {
@@ -34,7 +28,7 @@ public class IntegrationTests : TestBase
             ErrorMessageOnFailure = null,
         };
 
-        var result = Xml.Write(input, connection, options, CancellationToken.None);
+        var result = Echo.Execute(input, connection, options, CancellationToken.None);
 
         Assert.That(result.Output, Is.EqualTo("foobar, foobar, foobar"));
     }
