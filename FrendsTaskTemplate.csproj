@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>1.7.0</PackageVersion>
+        <PackageVersion>1.8.0</PackageVersion>
         <PackageId>frendstasktemplate</PackageId>
         <Title>Frends Task template</Title>
         <Authors>Frends</Authors>
@@ -10,17 +10,19 @@
         <PackageProjectUrl>https://github.com/FrendsPlatform/FrendsTaskTemplate</PackageProjectUrl>
         <PackageTags>dotnet-new;templates;frends</PackageTags>
         <TargetFramework>net8.0</TargetFramework>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
 
         <IncludeContentInPack>true</IncludeContentInPack>
-        <IncludeBuildOutput>false</IncludeBuildOutput>
         <ContentTargetFolders>content</ContentTargetFolders>
-        <NoDefaultExcludes>true</NoDefaultExcludes>
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="Frends.Template\**\*" Exclude="Frends.Template\**\bin\**;Frends.Template\**\obj\**" />
-        <Compile Remove="**\*" />
-        <None Include="README.md" Pack="true" PackagePath="\" />
+        <Content Include="Frends.Template\**\*"
+                 Exclude="Frends.Template\**\bin\**;
+                      Frends.Template\**\obj\**;
+                      Frends.Template\**\.idea\**"/>
+        <Compile Remove="**\*"/>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
 </Project>
