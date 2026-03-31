@@ -1,3 +1,13 @@
+# ⚠️ ARCHIVED: Repository No Longer Supported
+
+This repository is **no longer actively maintained or supported**. The codebase has been migrated to a new location to ensure better integration and ongoing updates.
+
+### 🚀 New Location
+Please find the latest version and continue development here:
+**[FrendsTaskTemplate on GitHub](https://github.com/FrendsPlatform/FrendsTasks/tree/main/FrendsTaskTemplate)**
+
+---
+
 # Frends Task template
 
 [![BuildMaster](https://github.com/FrendsPlatform/FrendsTaskTemplate/actions/workflows/BuildMaster.yml/badge.svg)](https://github.com/FrendsPlatform/FrendsTaskTemplate/actions/workflows/BuildMaster.yml)
